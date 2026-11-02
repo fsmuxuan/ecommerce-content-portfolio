@@ -1,0 +1,30 @@
+{
+  "name": "ecommerce-content-portfolio",
+  "version": "1.1.0+codex.20261102-v11",
+  "description": "Manage capped product titles, picture-led platform detail pages, marketplace main images, image inventory, performance feedback, and controlled iteration across an ecommerce product portfolio.",
+  "author": {
+    "name": "Ecommerce Operations Team"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ecommerce",
+    "1688",
+    "product-content",
+    "main-images",
+    "detail-page",
+    "portfolio-operations"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "电商内容运营中枢",
+    "shortDescription": "统筹产品标题、主图、详情、素材和经营数据迭代",
+    "longDescription": "从产品知识库、关键词库和真实图片库生成成套电商内容；标题不超过60全角计数单位，详情页优先展示真实场景、品质、车间、包装与客户使用证据。",
+    "developerName": "Ecommerce Operations Team",
+    "category": "Productivity",
+    "capabilities": [
+      "Content generation",
+      "Asset management",
+      "Performance analysis"
+    ]
+  }
+}
