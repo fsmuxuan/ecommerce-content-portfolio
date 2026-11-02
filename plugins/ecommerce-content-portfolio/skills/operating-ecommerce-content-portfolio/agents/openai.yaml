@@ -1,0 +1,4 @@
+interface:
+  display_name: "电商内容运营中枢"
+  short_description: "统筹全部产品的标题、主图、详情、素材与经营数据迭代"
+  default_prompt: "使用 $operating-ecommerce-content-portfolio，根据产品知识库、关键词库和真实图片库生成标题、主图和详情页，并持续记录素材与经营效果。"

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>通用产品询盘详情页母版 V3 图片优先</title>
+  <style>
+    :root{
+      --page-width:750px;
+      --theme-primary:#0f4d3c;
+      --theme-deep:#082a22;
+      --theme-accent:#9bc53d;
+      --theme-surface:#eef5f0;
+      --theme-text:#13261f;
+      --theme-muted:#607068;
+      --theme-line:#d8e3dc;
+      --theme-radius:18px;
+      --theme-overlay:linear-gradient(180deg,transparent 28%,rgba(8,42,34,.86) 100%);
+    }
+    *{box-sizing:border-box}
+    html{background:#e7ece9}
+    body{margin:0;color:var(--theme-text);background:#e7ece9;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Arial,sans-serif}
+    h1,h2,h3,p{margin:0}
+    .master{width:var(--page-width);max-width:100%;margin:0 auto;background:#fff;box-shadow:0 24px 80px rgba(20,44,34,.14)}
+    .hero{padding:62px 48px 52px;color:#fff;background:linear-gradient(140deg,var(--theme-deep),var(--theme-primary))}
+    .hero h1{max-width:560px;font-size:46px;line-height:1.12;letter-spacing:-1.5px}
+    .hero .en{margin-top:10px;color:#cbe894;font-size:18px;font-weight:750}
+    .hero .lead{max-width:610px;margin-top:24px;color:rgba(255,255,255,.8);font-size:17px;line-height:1.8}
+    .hero .rule{margin-top:30px;padding:17px 20px;color:#173528;background:var(--theme-accent);font-size:15px;font-weight:850;line-height:1.65}
+    .section{padding:48px}
+    .section.soft{background:var(--theme-surface)}
+    .section.dark{color:#fff;background:var(--theme-deep)}
+    .section-head{display:flex;gap:24px;align-items:flex-end;justify-content:space-between;margin-bottom:27px}
+    .section-head h2{font-size:31px;line-height:1.28}
+    .section-head p{max-width:315px;color:var(--theme-muted);font-size:14px;line-height:1.65;text-align:right}
+    .dark .section-head p{color:rgba(255,255,255,.66)}
+    .theme-list{display:grid;gap:13px}
+    .theme-card{display:grid;grid-template-columns:136px 1fr;min-height:110px;overflow:hidden;border:1px solid var(--theme-line);border-radius:var(--theme-radius);background:#fff}
+    .theme-colors{display:grid;grid-template-columns:1fr 1fr}
+    .theme-colors i{display:block}
+    .theme-copy{padding:21px 22px}
+    .theme-copy strong{display:block;font-size:18px}
+    .theme-copy span{display:block;margin-top:6px;color:var(--theme-muted);font-size:13px;line-height:1.6}
+    [data-theme="outdoor-natural"] .c1{background:#174c3d}[data-theme="outdoor-natural"] .c2{background:#a2c94d}
+    [data-theme="engineering-tech"] .c1{background:#0b3553}[data-theme="engineering-tech"] .c2{background:#69b8d2}
+    [data-theme="architectural-industrial"] .c1{background:#303b43}[data-theme="architectural-industrial"] .c2{background:#ef7a2d}
+    [data-theme="courtyard-premium"] .c1{background:#49392e}[data-theme="courtyard-premium"] .c2{background:#c9a36a}
+    [data-theme="commercial-bright"] .c1{background:#255baf}[data-theme="commercial-bright"] .c2{background:#f1c94d}
+    .flow{display:grid;gap:0;border-top:1px solid rgba(255,255,255,.2)}
+    .flow-row{display:grid;grid-template-columns:54px 190px 1fr;gap:18px;padding:21px 0;border-bottom:1px solid rgba(255,255,255,.15);align-items:start}
+    .flow-row b{display:grid;place-items:center;width:38px;height:38px;color:var(--theme-deep);background:var(--theme-accent);border-radius:50%;font-size:14px}
+    .flow-row strong{font-size:17px;line-height:1.45}
+    .flow-row p{color:rgba(255,255,255,.68);font-size:13px;line-height:1.7}
+    .contract{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .contract article{padding:23px;border-left:5px solid var(--theme-primary);background:#fff}
+    .contract strong{display:block;font-size:17px}
+    .contract p{margin-top:8px;color:var(--theme-muted);font-size:13px;line-height:1.65}
+    .code{margin-top:20px;padding:22px;color:#d7efe5;background:#102b23;border-radius:14px;font:13px/1.75 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap}
+    .gates{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--theme-line);border:1px solid var(--theme-line)}
+    .gate{padding:22px;background:#fff}
+    .gate strong{display:block;font-size:16px}
+    .gate p{margin-top:7px;color:var(--theme-muted);font-size:13px;line-height:1.65}
+    .export-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .export-flow div{padding:20px 12px;text-align:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15)}
+    .export-flow strong{display:block;color:var(--theme-accent);font-size:15px}
+    .export-flow span{display:block;margin-top:7px;color:rgba(255,255,255,.64);font-size:12px;line-height:1.5}
+    .foot{padding:28px 48px;color:#4f6258;background:#dfe9e2;font-size:13px;line-height:1.7;text-align:center}
+    @media(max-width:620px){
+      .hero,.section{padding:38px 24px}.hero h1{font-size:36px}.section-head{display:block}.section-head p{margin-top:10px;text-align:left}.theme-card{grid-template-columns:92px 1fr}.flow-row{grid-template-columns:42px 1fr}.flow-row p{grid-column:2}.contract,.gates{grid-template-columns:1fr}.export-flow{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+  <main class="master" data-export-width="750">
+    <header class="hero">
+      <h1>通用产品询盘详情页母版 V3</h1>
+      <p class="en">Adaptive Product Inquiry Detail Master</p>
+      <p class="lead">这是一张“图片先证明、文字后解释”的详情页母版：产品库决定事实，真实素材决定可展示的证据，平台决定信息排序。正式商品页只保留面向买家的表达。</p>
+      <div class="rule">优先让买家看见场景、质量细节、生产/包装和相似使用场景；缺少真实证据的模块必须隐藏并进入补拍清单。</div>
+    </header>
+
+    <section class="section soft">
+      <div class="section-head"><h2>五套产品主题</h2><p>产品类别先确定气质，真实主图提取辅助色，品牌色可以覆盖；所有组合都必须通过文字对比度检查。</p></div>
+      <div class="theme-list">
+        <article class="theme-card" data-theme="outdoor-natural"><div class="theme-colors"><i class="c1"></i><i class="c2"></i></div><div class="theme-copy"><strong>户外自然 / Outdoor Natural</strong><span>遮阳网、遮阳帆、园林与户外休闲产品。</span></div></article>
+        <article class="theme-card" data-theme="engineering-tech"><div class="theme-colors"><i class="c1"></i><i class="c2"></i></div><div class="theme-copy"><strong>工程科技 / Engineering Tech</strong><span>电动设备、控制系统、工程方案与项目型产品。</span></div></article>
+        <article class="theme-card" data-theme="architectural-industrial"><div class="theme-colors"><i class="c1"></i><i class="c2"></i></div><div class="theme-copy"><strong>建筑工业 / Architectural Industrial</strong><span>钢结构、五金、建材和强调可靠交付的产品。</span></div></article>
+        <article class="theme-card" data-theme="courtyard-premium"><div class="theme-colors"><i class="c1"></i><i class="c2"></i></div><div class="theme-copy"><strong>轻奢庭院 / Courtyard Premium</strong><span>庭院、别墅、高端定制和重视空间效果的产品。</span></div></article>
+        <article class="theme-card" data-theme="commercial-bright"><div class="theme-colors"><i class="c1"></i><i class="c2"></i></div><div class="theme-copy"><strong>明亮商业 / Commercial Bright</strong><span>餐厅、泳池、幼儿园和需要高识别度的商业场景。</span></div></article>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="section-head"><h2>八段图片优先的客户决策顺序</h2><p>后台保留结构规则，正式页面删除模块编号、证据标签和内部判断语言；每个图文段只保留短标题和一行解释。</p></div>
+      <div class="flow">
+        <div class="flow-row"><b>1</b><strong>买家场景与适配</strong><p>先用真实场景让买家判断“和我的使用环境是否相近”，再用一句话说明可解决的问题。</p></div>
+        <div class="flow-row"><b>2</b><strong>产品定义与购买理由</strong><p>直接给出产品名、工作方式、用途和三项已证实的短购买理由，不写长段自夸。</p></div>
+        <div class="flow-row"><b>3</b><strong>质量细节可视化</strong><p>用2—4张清晰近景证明可见的材质、收边、连接、纹理或工艺；画面看不见的性能不写成事实。</p></div>
+        <div class="flow-row"><b>4</b><strong>规格、配置与选择</strong><p>参数表由产品库生成；用选择图帮助买家确认型号、尺寸、颜色或配件，非必要字段隐藏。</p></div>
+        <div class="flow-row"><b>5</b><strong>生产车间与供应能力</strong><p>有企业身份和生产证据时展示车间/工序；没有时只表述已确认的供应或定制边界。</p></div>
+        <div class="flow-row"><b>6</b><strong>客户使用场景</strong><p>按买家常见环境展示真实使用画面；不同客户或项目不能剪辑成同一案例。</p></div>
+        <div class="flow-row"><b>7</b><strong>包装与交付专业度</strong><p>展示真实内保护、外包装、托盘/固定或待发画面；交期、质保和服务仅写已确认条款。</p></div>
+        <div class="flow-row"><b>8</b><strong>结构化询盘</strong><p>询盘字段由产品报价和方案所需输入决定，不用所有商品完全相同的问题。</p></div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="section-head"><h2>生成接口</h2><p>输入可以增加，但最终页面只能使用产品库和已授权素材能够证明的内容。</p></div>
+      <div class="contract">
+        <article><strong>product_profile</strong><p>产品名称、分类、定义、规格、选项、服务边界、公开等级和冲突状态。</p></article>
+        <article><strong>image_inventory</strong><p>真实文件名、画面内容、项目归属、授权、隐私风险和可使用模块。</p></article>
+        <article><strong>theme_profile</strong><p>基础主题、图片辅助色、品牌覆盖色、圆角、图片遮罩和视觉气质。</p></article>
+        <article><strong>benchmark_insights</strong><p>只保存买家问题、模块模式、证据类型、图片角色和CTA模式，不保存竞品文案、截图或素材。</p></article>
+        <article><strong>platform_profile</strong><p>目标平台、详情宽度、双语层级、图片格式、压缩要求、发布限制，以及采购/消费/视频/搜索的决策排序。</p></article>
+        <article><strong>export_profile</strong><p>高清倍率、完整长图、模块切片、命名规则、质量上限和导出质检。</p></article>
+      </div>
+      <div class="code">--page-width: 750px;
+--theme-primary: category + brand override;
+--theme-deep: readable dark surface;
+--theme-accent: sampled from approved real imagery;
+--theme-surface: light information band;
+--theme-text / --theme-muted / --theme-line;
+--theme-radius / --theme-overlay;</div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>真实性与发布门槛</h2><p>系统不是填满模板，而是对无证据模块进行隐藏、降级或阻断。</p></div>
+      <div class="gates">
+        <article class="gate"><strong>事实门槛</strong><p>参数、交期、质保、服务和效果必须来自当前产品库；冲突内容不定稿。</p></article>
+        <article class="gate"><strong>图片门槛</strong><p>真实图片记录文件名、归属和授权；缺少图片时输出任务清单，不生成假案例。</p></article>
+        <article class="gate"><strong>身份门槛</strong><p>企业角色与证据一致；无生产主体证据时使用“供应与定制能力”。</p></article>
+        <article class="gate"><strong>公开门槛</strong><p>内部成本、受控报告、独有组合参数和客户隐私不进入商品页面。</p></article>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="section-head"><h2>高清导出路径</h2><p>GoFullPage用于临时预览，正式批量生产使用受控浏览器渲染。</p></div>
+      <div class="export-flow">
+        <div><strong>HTML母版</strong><span>UTF-8、750px、真实图片</span></div>
+        <div><strong>2×高清渲染</strong><span>等待字体与图片加载</span></div>
+        <div><strong>完整长图</strong><span>保留高质量源文件</span></div>
+        <div><strong>智能切片</strong><span>在模块边界导出平台图片</span></div>
+      </div>
+    </section>
+
+    <footer class="foot">本页是内部母版规范。正式商品详情页不会出现接口名、规则说明、证据门槛或导出流程。</footer>
+  </main>
+</body>
+</html>

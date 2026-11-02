@@ -1,0 +1,43 @@
+{
+  "product_id": "replace-with-registered-product-id",
+  "version_id": "YYYYMMDD-v01",
+  "platform": "1688",
+  "listing_type": "spot",
+  "strategy_angle": "scene",
+  "fact_source_files": ["产品主档.md"],
+  "titles": [
+    {
+      "text": "已校验标题",
+      "angle": "scene",
+      "core_keyword": "核心产品词",
+      "long_tail_keywords": ["场景词"],
+      "fullwidth_units": 0,
+      "fullwidth_unit_limit": 60,
+      "validation": "passed"
+    }
+  ],
+  "main_images": [
+    {"role": "product-overview", "image_path": "relative-real-image-1.jpg", "headline": "产品名称", "subline": "短限定语"},
+    {"role": "usage-scene", "image_path": "relative-real-image-2.jpg", "headline": "真实使用场景", "subline": "事实边界"},
+    {"role": "product-detail", "image_path": "relative-real-image-3.jpg", "headline": "可见细节", "subline": "可证实说明"},
+    {"role": "sku-colors", "image_path": "relative-real-image-4.jpg", "headline": "规格与选项", "subline": "以订单确认为准"},
+    {"role": "white-product", "image_path": "relative-real-image-5.png", "headline": "", "subline": ""}
+  ],
+  "detail_modules": [
+    {"module_id": "01-application-solution", "headline": "买家场景与适配", "claims": [], "image_roles": ["application"]},
+    {"module_id": "02-product-definition", "headline": "产品定义与购买理由", "claims": []},
+    {"module_id": "03-advantages", "headline": "质量细节可视化", "claims": [], "image_roles": ["product-detail"]},
+    {"module_id": "04-specifications-options", "headline": "规格配置与配件", "claims": []},
+    {"module_id": "05-supply-customization", "headline": "生产车间与供应能力", "claims": [], "image_roles": ["production"]},
+    {"module_id": "06-applications-projects", "headline": "客户使用场景", "claims": [], "image_roles": ["application"]},
+    {"module_id": "07-packing-leadtime-service", "headline": "包装与交付专业度", "claims": [], "image_roles": ["packaging"]},
+    {"module_id": "08-structured-inquiry", "headline": "结构化询盘", "claims": []}
+  ],
+  "outputs": {
+    "titles": "absolute-path-to-titles-file",
+    "main_image_html": "absolute-path-to-platform-main-images.html",
+    "main_image_export_report": "absolute-path-to-main-image-export-report.json",
+    "detail_html": "absolute-path-to-product-detail.html",
+    "detail_export_report": "absolute-path-to-detail-export-report.json"
+  }
+}

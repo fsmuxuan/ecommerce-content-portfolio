@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=750,initial-scale=1">
+  <title>{{PAGE_TITLE}}</title>
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;padding:0;background:#d9e2e1;font-family:"Noto Sans CJK SC","Source Han Sans SC","PingFang SC","Microsoft YaHei",Arial,sans-serif}
+    :root{--size:750px;--safe:48px;--deep:{{DEEP}};--accent:{{ACCENT}};--paper:{{PAPER}};--ink:{{INK}}}
+    .preview{width:750px;margin:0 auto}.platform-card{position:relative;width:var(--size);height:var(--size);overflow:hidden;background:var(--deep);isolation:isolate}.primary-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:-2}.photo-shade{position:absolute;inset:0;z-index:-1}.copy{position:absolute;left:var(--safe);right:var(--safe);bottom:48px;z-index:2;color:#fff}h1,h2,p{margin:0}.title{font-size:50px;line-height:1.12;font-weight:900;letter-spacing:-1px}.subtitle{font-size:22px;line-height:1.45;font-weight:700;margin-top:13px}.english{font-size:17px;letter-spacing:1.5px;font-weight:800;color:var(--accent);margin-bottom:12px}
+    .overview-card .photo-shade,.scene-card .photo-shade,.detail-card .photo-shade{background:linear-gradient(180deg,rgba(2,25,31,.02) 38%,rgba(2,28,34,.9) 100%)}
+    .sku-card{background:var(--paper);color:var(--ink)}.sku-card .photo-shade{background:linear-gradient(90deg,rgba(4,36,42,.04),rgba(4,36,42,.32))}.sku-panel{position:absolute;top:34px;right:34px;bottom:34px;width:344px;padding:30px;border-radius:24px;background:rgba(250,252,250,.96);box-shadow:0 20px 60px rgba(5,35,42,.24);color:var(--ink)}.sku-panel .title{font-size:34px}.sku-panel .subtitle{font-size:15px;color:#647a79;margin-top:8px}.system-list{display:grid;gap:10px;margin-top:22px}.system{padding:14px;border-radius:14px;background:#e9f3f0;border-left:6px solid #13776f}.system strong{display:block;font-size:20px}.system span{display:block;margin-top:4px;font-size:14px;color:#536d6b}.chip-title{margin-top:20px;font-size:17px;font-weight:900}.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:10px 7px;margin-top:11px}.chip{text-align:center;font-size:12px;color:#405b5a;font-weight:700}.swatch{width:42px;height:42px;border-radius:50%;margin:0 auto 5px;border:2px solid rgba(8,48,57,.18)}
+    .white-card{background:#FFFFFF!important}.white-card .primary-photo{z-index:1;object-fit:contain;inset:38px;width:calc(100% - 76px);height:calc(100% - 76px)}
+  </style>
+</head>
+<body><main class="preview" data-export-width="750">{{CARDS}}</main></body>
+</html>
